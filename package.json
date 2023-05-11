@@ -1,0 +1,28 @@
+{
+  "name": "proxy-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catlynbowles/proxy-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/catlynbowles/proxy-server/issues"
+  },
+  "homepage": "https://github.com/catlynbowles/proxy-server#readme",
+  "dependencies": {
+    "@jswork/next-fetch": "^1.2.20",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.1"
+  }
+}
