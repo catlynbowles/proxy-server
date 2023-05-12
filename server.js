@@ -3,15 +3,21 @@ import fetch from "node-fetch";
 import cors from 'cors'
 const app = express();
 
-app.use(cors())
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 app.get('/', async (req, res) => {
-  if (req.get('feeling')) {
-    req._custom = req.get('feeling')
-  }
-  const response = await fetch(
-    `http://api.wefeelfine.org:8080/ShowFeelings?display=xml&returnfields=sentence,imageid,postdate&feeling=${req._custom}&limit=500&extraimages=8`
-  );
+  // if (req.get('feeling')) {
+  //   req._custom = req.get('feeling')
+  // }
+  // const response = fetch("https://dummyjson.com/products/1");
+  // console.log(response)
+  // res.json(await response.json())
+  console.log('hi')
+  const response = await fetch("https://dummyjson.com/products/1");
   const body = await response.text();
   res.json(body)
 })
@@ -19,3 +25,10 @@ app.get('/', async (req, res) => {
 app.listen(3001, () => {
   console.log('Listening on port 3001!')
 })
+
+// if (req.get("X-Custom-Header")) {
+//   // add custom to your request object
+//   req._custom = req.get("X-Custom-Header");
+// }
+
+// return next();
