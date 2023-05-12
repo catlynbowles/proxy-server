@@ -21,6 +21,7 @@
   "homepage": "https://github.com/catlynbowles/proxy-server#readme",
   "dependencies": {
     "@jswork/next-fetch": "^1.2.20",
+    "axios": "^1.4.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "node-fetch": "^3.3.1"
