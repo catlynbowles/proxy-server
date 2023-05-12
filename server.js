@@ -3,9 +3,7 @@ import fetch from "node-fetch";
 import cors from "cors";
 const app = express();
 
-app.use(
-  cors()
-);
+app.use(cors());
 
 app.get('/', async (req, res) => {
   // if (req.get('feeling')) {
@@ -14,10 +12,9 @@ app.get('/', async (req, res) => {
   // const response = fetch("https://dummyjson.com/products/1");
   // console.log(response)
   // res.json(await response.json())
-  console.log('hi')
   const response = await fetch("https://dummyjson.com/products/1");
   const body = await response.text();
-  res.json(body);
+  res.text(body);
 });
 
 app.listen(3001, () => {
