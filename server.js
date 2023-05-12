@@ -32,4 +32,4 @@ app.listen(3001, () => {
 });
 
 // Export the Express API
-module.exports = app;
+export default app;
