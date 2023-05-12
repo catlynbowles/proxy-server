@@ -4,10 +4,15 @@ import cors from "cors";
 const app = express();
 
 app.use(
-  cors({
-    origin: "*",
-  })
+  cors()
 );
+
+app.options("/", function (req, res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "*");
+  res.setHeader("Access-Control-Allow-Headers", "*");
+  res.end();
+});
 
 app.get('/', async (req, res) => {
   // if (req.get('feeling')) {
