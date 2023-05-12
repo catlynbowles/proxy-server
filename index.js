@@ -14,7 +14,7 @@ app.get('/', async (req, res) => {
   // res.json(await response.json())
   const response = await fetch("https://dummyjson.com/products/1");
   const body = await response.text();
-  res.text(body);
+  res.json(body);
 });
 
 app.listen(3001, () => {
